@@ -1,0 +1,429 @@
+:root {
+  --primary-color: #e8b182;
+  --secondary-color: #ffb99c;
+  --third-color: #e89082;
+  --price-color: #fadadd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#logo,
+footer p,
+#help,
+#info {
+  font-family: 'Josefin slab';
+
+}
+
+#bombon {
+  margin-left: 40px;
+}
+
+nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  font-family: 'Josefin sans', sans-serif;
+}
+
+nav i {
+  font-size: 25px;
+}
+
+/* Separador header y main */
+hr {
+  background-color: black;
+  margin: 1em 0;
+  height: 3px;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+}
+
+header {
+  /*position: absolute;*/
+  width: 100%;
+}
+
+/* Efecto subrayado */
+header nav a:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+header nav a:hover:after {
+  width: 100%;
+}
+
+/* Color para el logo*/
+header #logo a {
+  color: var(--primary-color);
+  text-decoration: none;
+  position: absolute;
+  margin: 30px;
+  font-size: 30px;
+}
+
+header #logo span {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+body {
+  background-color: white;
+  font-family: 'Josefin sans', sans-serif;
+}
+
+footer {
+  background-color: var(--primary-color);
+  padding: 30px;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  position: relative;
+}
+
+/* Color para el logo */
+footer p {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 25px;
+}
+
+footer span {
+  margin-left: 40px;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer h4 {
+  font-family: 'Josefin sans', sans-serif;
+  padding: 10px 0px;
+}
+
+footer #container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#social {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin: 20px;
+}
+
+#links {
+  position: relative;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#links a {
+  color: white;
+  margin: 10px;
+}
+
+#help {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#help a {
+  padding: 5px 0px;
+}
+
+#help a:hover {
+  color: white;
+}
+
+#info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#info ul li {
+  padding: 5px 0px;
+}
+
+#info i {
+  margin-right: 10px;
+}
+
+
+.start {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  color: white;
+  background-color: var(--price-color);
+  margin-bottom: 20px;
+}
+
+
+
+/* Media Queries para dispositivos */
+/* TABLETS */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  nav {
+      font-size: 1.5vw;
+  }
+
+  footer {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5vw;
+  }
+
+}
+
+/* CELULARES */
+@media screen and (max-width: 767px) {
+  h2 {
+      font-size: 3vw;
+  }
+
+  .h2-subtitle {
+      font-size: 5vw;
+  }
+
+  .login-text {
+      display: none;
+  }
+
+  .logo-text {
+      display: none;
+  }
+
+  #banner {
+      height: 300px;
+  }
+
+  #search {
+      height: 200px;
+  }
+
+  footer {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  footer a {
+      padding: 2px 0;
+  }
+
+}
+
+/*--------------- Comienzo de Estilos de la página Términos y Condiciones ---------------*/
+
+.title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: -10px;
+}
+
+h1#main-title {
+  display: inline;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 50px;
+  font-style: normal;
+  color: white;
+  background: var(--primary-color);
+  padding: 10px;
+}
+
+.subtitle {
+  color: var(--third-color);
+  font-weight: bold;
+  text-align: left;
+  margin: 50px 0px 50px;
+}
+
+.subtitle1 {
+  margin-top: 0px;
+}
+
+#terms-and-conditions p {
+  margin: 20px 0px 20px;
+}
+
+.article4 {
+  margin-top: 75px;
+  margin-bottom: 100px;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-areas: "section section aside";
+  grid-template-columns: 1fr 1fr 1fr;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+
+section#terms-and-conditions {
+  grid-area: section;
+  padding-left: 20%;
+
+}
+
+aside.see-more {
+  grid-area: aside;
+  margin: auto;
+  margin-top: 50px;
+  background: var(--primary-color);
+  border-radius: 20px;
+  width: 25vw;
+  height: 950px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+
+.frame397, .frame398,
+.frame399, .frame400 {
+  width: 250px;
+  height: 135px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.frame396, .frame401,
+.frame402, .frame403 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.frame401 {
+  margin-top: 10px;
+}
+
+.frame403 {
+  margin-bottom: 10px;
+}
+
+.content397, .image397,
+.content398, .image398,
+.content399, .image399,
+.content400, .image400 {
+  width: 80%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;    
+}
+
+.image397, .image398,
+.image399, .image400 {
+  object-fit: fill;
+  max-width: 100%;
+
+}
+
+.link-products {
+  color: white;
+  
+}
+
+a.link-products:hover {
+  border-bottom: 1px solid;   
+}
+
+/* Media Queries para página Términos y Condiciones */
+
+@media screen and (max-width: 1200px) {
+
+  .container-grid {
+      display: grid;
+      grid-template-areas: "section section"
+          "aside aside";
+      grid-template-columns: 1fr 1fr;
+      font-family: "Josefin Sans", sans-serif;
+  }
+
+
+  aside.see-more {
+      grid-area: aside;
+      background: #E7B182;
+      border-radius: 20px;
+      width: 60%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      color: white;
+      padding: 20px;
+      margin-top: -50px;
+      margin-bottom: 50px;
+      
+  }
+
+  section#terms-and-conditions {
+      padding-left: 10%;
+      padding-right: 10%;
+  }
+
+  .content397, .image397,
+  .content398, .image398,
+  .content399, .image399,
+  .content400, .image400 {
+      width: 250px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5vw;
+}
+
+  .frame396 {
+      width: 100%;
+      justify-content: center;
+  }
+
+}
+
+
+/*------------------ Fin de Estilos de la página Términos y Condiciones -----------------*/
